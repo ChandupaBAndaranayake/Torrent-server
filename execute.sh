@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER_DIR="./server_folder"
+SERVER_DIR="./shared_folder"
 CLIENT_DIR="./client_folder"
 server="./Server"
 client="./Client"

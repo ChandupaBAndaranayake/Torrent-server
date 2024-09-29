@@ -27,11 +27,12 @@
 #define MAX_CLIENTS 100
 #define CHUNK_SIZE 1024
 #define MAX_FILENAME 256
-#define SERVER_PORT 9122
+#define SERVER_PORT 2206 // first 4 digits of my regNO
+#define CLIENT_PORT 9122 // last 4 digits of my regNo
 #define SERVER_IP "127.0.0.1"
 
 // Folder paths
-#define SERVER_INPUT_FOLDER "./server_folder/"
+#define SERVER_INPUT_FOLDER "./shared_folder/"
 #define SERVER_OUTPUT_FOLDER "./Server/"
 #define CLIENT_INPUT_FOLDER "./client_folder/"
 #define CLIENT_OUTPUT_FOLDER "./Client/"

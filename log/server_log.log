@@ -141,3 +141,42 @@
 [2024-09-28 21:28:28] Client IP: 127.0.0.1, Port: 43156, File: windows-11-23h2.iso, Status: Transfer successful
 [2024-09-28 21:28:28] Client IP: 127.0.0.1, Port: 43162, File: windows-11-23h2.iso, Status: Transfer successful
 [2024-09-28 21:28:28] Client IP: 127.0.0.1, Port: 43178, File: windows-11-23h2.iso, Status: Transfer successful
+[2024-09-29 12:14:05] Client IP: 127.0.0.1, Port: 51010, File: N/A, Status: Connected
+[2024-09-29 12:14:22] Client IP: 127.0.0.1, Port: 51010, File: file_42.bin, Status: Upload successful
+[2024-09-29 12:14:30] Client IP: 127.0.0.1, Port: 46172, File: N/A, Status: Connected
+[2024-09-29 12:14:40] Client IP: 127.0.0.1, Port: 46172, File: file_50.bin, Status: Transfer successful
+[2024-09-29 12:44:55] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 12:52:14] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Disconnected
+[2024-09-29 12:53:33] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 12:56:35] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Disconnected
+[2024-09-29 12:56:53] Client IP: 127.0.0.1, Port: 38984, File: N/A, Status: Connected
+[2024-09-29 12:56:56] Client IP: 127.0.0.1, Port: 38992, File: N/A, Status: Connected
+[2024-09-29 13:08:17] Client IP: 127.0.0.1, Port: 38992, File: N/A, Status: Disconnected
+[2024-09-29 13:08:20] Client IP: 127.0.0.1, Port: 38984, File: N/A, Status: Disconnected
+[2024-09-29 13:11:00] Client IP: 127.0.0.12, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:05] Client IP: 127.0.0.2, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:06] Client IP: 127.0.0.3, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:07] Client IP: 127.0.0.4, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:08] Client IP: 127.0.0.7, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:09] Client IP: 127.0.0.6, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:10] Client IP: 127.0.0.5, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:11] Client IP: 127.0.0.9, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:18:12] Client IP: 127.0.0.8, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:20:11] Client IP: 127.0.0.2, Port: 9122, File: file_44.bin, Status: Upload successful
+[2024-09-29 14:20:11] Client IP: 127.0.0.3, Port: 9122, File: file_44.bin, Status: Transfer successful
+[2024-09-29 14:20:12] Client IP: 127.0.0.4, Port: 9122, File: file_44.bin, Status: Upload successful
+[2024-09-29 14:20:13] Client IP: 127.0.0.7, Port: 9122, File: file_44.bin, Status: Transfer successful
+[2024-09-29 14:20:14] Client IP: 127.0.0.6, Port: 9122, File: file_44.bin, Status: Upload successful
+[2024-09-29 14:20:15] Client IP: 127.0.0.5, Port: 9122, File: file_44.bin, Status: Transfer successful
+[2024-09-29 14:20:16] Client IP: 127.0.0.9, Port: 9122, File: file_44.bin, Status: Upload successful
+[2024-09-29 14:20:16] Client IP: 127.0.0.8, Port: 9122, File: file_44.bin, Status: Transfer successful
+[2024-09-29 14:26:07] Client IP: 127.0.0.145, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:26:49] Client IP: 127.0.0.145, Port: 9122, File: N/A, Status: Disconnected
+[2024-09-29 14:27:08] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:27:43] Client IP: 127.0.0.1, Port: 9122, File: file_44.bin, Status: Transfer successful
+[2024-09-29 14:28:10] Client IP: 127.0.0.1, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:28:16] Client IP: 127.0.0.1, Port: 9122, File: file_44.bin, Status: Upload failed
+[2024-09-29 14:30:05] Client IP: 127.0.0.2, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:30:21] Client IP: 127.0.0.2, Port: 9122, File: windows-11-23h2.iso, Status: Transfer failed
+[2024-09-29 14:30:24] Client IP: 127.0.0.2, Port: 9122, File: N/A, Status: Connected
+[2024-09-29 14:30:44] Client IP: 127.0.0.2, Port: 9122, File: windows-11-23h2.iso, Status: Resume transfer successful

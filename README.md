@@ -12,34 +12,16 @@ Ensure you have the following files in your working directory:
 - `file_transfer_common.h`
 
 Also, make sure you have the necessary folders created:
-- `./server_folder/`
+- `./shared_folder/`
 - `./Server/`
 - `./client_folder/`
 - `./Client/`
 - `./log/`
 
-## Compilation
-### Compile the Server
-
-To compile the server program, use the following command:
-
-```bash
-gcc -o server server.c -DESERVER
-```
-
-The `-DSERVER` flag defines the `SERVER` macro, which is used in `file_transfer_common.h` to include server-specific headers.
-
-### Compile the Client
-
-To compile the client program, use the following command:
-
-```bash
-gcc -o client client.c
-```
-### File Generation Script -> execute.sh
+## File Generation Script -> execute.sh
 
 #### Purpose
-This script generates 50 random binary files of 10MB each in both the `server_folder` and `client_folder` directories.
+This script generates 50 random binary files of 10MB each in both the `shared_folder`,`client_folder`,`Server` and `Client` directories.If the parent directory './' doesnt not containe `shared_folder` and `client_folder`, run this script and script with create the necessary directories in the project directory.
 
 ##### Give Execute Permission
 
@@ -51,7 +33,7 @@ chmod +x generate_files.sh
 
 ##### Execute the Script
 
-The script will create the `server_folder` and `client_folder` directories (if they don't already exist) and will generate 50 random binary files (each 10MB) in both directories.
+The script will create the `shared_folder` and `client_folder` directories (if they don't already exist) and will generate 50 random binary files (each 10MB) in both directories.
 
 Run the script by using:
 
@@ -61,13 +43,30 @@ Run the script by using:
 
 #### Verfiy
 
-Check the respective directories (`server_folder` and `client_folder`) to verify that the files have been created:
+Check the respective directories (`shared_folder` and `client_folder`) to verify that the files have been created:
 
 ```bash
-ls -lh ./server_folder/
+ls -lh ./shared_folder/
 ls -lh ./client_folder/
 ```
+## Compilation
+### Compile the Server
 
+To compile the server program, use the following command:
+
+```bash
+gcc -o server server.c
+```
+
+The `-DSERVER` flag defines the `SERVER` macro, which is used in `file_transfer_common.h` to include server-specific headers.
+
+### Compile the Client
+
+To compile the client program, use the following command:
+
+```bash
+gcc -o client client.c
+```
 
 ## Running the Programs
 
@@ -83,10 +82,10 @@ The server will start and listen for incoming connections on port 9122 (as defin
 
 ### Client
 
-To run the client, use the following command:
+To run the client, use a loopback address if the system is in the local machine (127.0.0.x[1-255]) use the following command:
 
 ```bash
-./client
+./client <IP addresss>
 ```
 
 The client will connect to the server and present a menu with options to download, upload, or resume downloading a file.
@@ -133,7 +132,7 @@ The file transfer system uses specific folders for input and output on both the 
 
 ### Server Folders
 
-1. **Server Input Folder** (`./server_folder/`):
+1. **Server Input Folder** (`./shared_folder/`):
    - Purpose: This folder contains files that are available for clients to download.
    - Usage: The server reads from this folder when a client requests a file download.
 
@@ -160,7 +159,7 @@ The file transfer system uses specific folders for input and output on both the 
 ## Assumptions
 
 1. The server and client are running on the same machine (localhost).
-2. The server uses port 9122 by default.
+2. The server uses port 2206 by default.
 3. The server has read/write access to the specified input and output folders.
 4. The client has read/write access to its specified input and output folders.
 5. File names do not contain spaces or special characters.

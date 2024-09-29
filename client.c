@@ -52,6 +52,29 @@ char* get_file_list() {
 }
 
 /*
+Binding the client sock into a fixed port
+*/
+int bind_socket(int sockfd,char *client_ip ){
+    struct sockaddr_in client_addr;
+
+    memset(&client_addr, 0, sizeof(client_addr));
+    client_addr.sin_family = AF_INET;
+    client_addr.sin_addr.s_addr = inet_addr(client_ip); 
+    client_addr.sin_port = htons(CLIENT_PORT);  
+
+    // Bind the socket to the specified IP and port
+    if (bind(sockfd, (struct sockaddr*)&client_addr, sizeof(client_addr)) < 0) {
+        perror("Bind failed");
+        close(sockfd);
+        return -1;
+    }
+
+    printf("Client ip address: %s, port: %d\n", client_ip, CLIENT_PORT);
+
+    return 0 ;
+}
+
+/*
 socket creation
 */
 int create_socket() {
@@ -68,6 +91,8 @@ connecting to the server
 */
 int connect_to_server(int sock) {
     struct sockaddr_in serv_addr = {0};
+
+    memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(SERVER_PORT);
     
@@ -80,7 +105,7 @@ int connect_to_server(int sock) {
         perror("Connection failed");
         return -1;
     }
-    //Displaying connected clients information------------------------------//
+    //Displaying connected  information------------------------------//
     char client_ip[INET_ADDRSTRLEN];
     inet_ntop(AF_INET, &serv_addr.sin_addr, client_ip, sizeof(client_ip));
     int client_port = ntohs(serv_addr.sin_port);
@@ -224,9 +249,20 @@ int upload_file(int sock, const char* filename) {
     return (total_bytes_sent == file_size) ? 0 : -1;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+    if(argc != 2){
+        fprintf(stderr, "Usage: %s <client_ip_address>\n", argv[0]);
+        return -1;
+    }
+
     int sock = create_socket();
-    if (sock == -1 || connect_to_server(sock) == -1) {
+    if (sock == -1 || bind_socket(sock, argv[1]) == -1) {
+        perror("Bind Failed!\n");
+        return -1;
+    }
+
+    if(connect_to_server(sock) == -1){
+        perror("Connection Failed by the Server!\n");
         return -1;
     }
 
